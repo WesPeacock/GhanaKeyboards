@@ -1,0 +1,529 @@
+﻿c Ghana6UnicodeNFD.kmn
+c Ghana Keyboard for Keyman
+c Written in January 95 - Paul David Johnson
+c modified in July 95 - add tone to nasals - PDJ
+c modified in November 99 - some characters were moved to new positions
+c commented out tone on nasals April 2005 Wes Peacock
+c updated to v 6
+c 2008/12/6 converted to Unicode
+c rewritten to allow multiple versions - Wes Peacock
+c made a complete keystroke combination table Feb 2009
+c 2016/01/07 Add Safaliba (occasionally misspelled SAFaliba to include comments in the grep)
+c  Add extension to icon names (required for kmfl)
+
+c  lines in all languages are commented GHN, specific lines are commented TLA 
+c where TLA is the 3 letter Ethnologure abbreviation for the Language name
+c Specific Tags used:
+c Short -Ghana Short includes epsilon, eng & open-o
+c FULL - Keyboard as released by GILLBT IT in Feb 2009 - with corrections
+c NKO - Nkonya
+c EWE - Ewe
+c BUD - Bassari
+c NCU - Chumburung (uses / ) as control character for underlining 
+
+c To get a specific version:
+c     Ghana Short:
+c       grep -E "(GHN)|(Short)" Ghana6UnicodeNFD.kmn >GhanaUnicode-Short.kmn 
+c         7 vowel no diacritics for many languages, e.g. Twi
+c        This duplicates the Ghana Unicode - Short  Keyboard released in February 2009
+
+c     Ghana Full
+c   The following DOS command builds the keyboard
+c       grep -E  "(GHN)|(FULL)" Ghana6UnicodeNFD.kmn >GhanaUnicode-FULL.kmn 
+c        This duplicates the Ghana Unicode Keyboard released in February 2009
+c         with the following exceptions:
+c          the coding sequence for Tone Mark + Nasalization sequences is either Tilde Tone or Tone Tilde
+c          ;<Capital> can be typed :<Capital>
+
+c   The following DOS command builds the keyboard
+c       grep -E  "(GHN)|(TLA)" Ghana6UnicodeNFD.kmn >GhanaUnicode-TLA.kmn
+c         for a language specific version use the three letter Ethnologue abbreviation TLA
+
+c       for Dagbani:
+c   The following DOS command builds the keyboard
+c          grep -E  "(GHN)|(DAG)" Ghana6UnicodeNFD.kmn >GhanaUnicode-DAG.kmn
+c       for Nkonya:
+c   The following DOS command builds the keyboard
+c          grep -E  "(GHN)|(NKO)" Ghana6UnicodeNFD.kmn >GhanaUnicode-NKO.kmn
+c       for Bassari:
+c   The following DOS command builds the keyboard
+c          grep -E  "(GHN)|(BUD)" Ghana6UnicodeNFD.kmn >GhanaUnicode-BUD.kmn
+c       for Chumburung:
+c   The following DOS command builds the keyboard
+c          grep -E  "(GHN)|(NCU)" Ghana6UnicodeNFD.kmn >GhanaUnicode-NCU.kmn
+c       for Ewe:
+c   The following DOS command builds the keyboard
+c          grep -E  "(GHN)|(EWE)" GhanaUnicodeNFD.kmn >GhanaUnicode-EWE.kmn
+c          The upsilon in Ewe is coded as ;v rather than q, as this is more natural with ;d and ;f 
+c       for Safaliba:
+c   The following DOS command builds the keyboard
+c          grep -E  "(GHN)|(SAF)" Ghana6UnicodeNFD.kmn >GhanaUnicode-SAF.kmn
+
+store(&Version) "7.0"                                       c GHN
+
+c Specific names
+store(&Name) "Ghana Unicode Short"                           c Short
+store(&Message) "Ghana Unicode - Version 7.0 - Short"          c Short
+store(&Bitmap) "GhanaUnicode-Short.bmp"                            c Short
+store(&Hotkey) "^%U"                                           c Short
+
+store(&Name) "Ghana Unicode"                           c FULL
+store(&Message) "Ghana Unicode - Version 7.0 - FULL"          c FULL
+store(&Bitmap) "GhanaUnicode.bmp"                            c FULL
+
+store(&Name) "Ghana Unicode - Nkonya"                             c NKO
+store(&Message) "Ghana Unicode - Version 7.0 - Nkonya Variant" c NKO
+store(&Bitmap) "GhanaUnicode-NKO.bmp"                              c NKO
+
+store(&Name) "Ghana Unicode - Dagbani"                             c DAG
+store(&Message) "Ghana Unicode - Version 7.0 - Dagbani Variant" c DAG
+store(&Bitmap) "GhanaUnicode.bmp"                              c DAG
+
+store(&Name) "Ghana Unicode - Bassari"                             c BUD
+store(&Message) "Ghana Unicode - Version 7.0 - Bassari Variant" c BUD
+store(&Bitmap) "GhanaUnicode.bmp"                              c BUD
+
+store(&Name) "Ghana Unicode - Chumburung"                             c NCU
+store(&Message) "Ghana Unicode - Version 7.0 - Chumburung Variant" c NCU
+store(&Bitmap) "GhanaUnicode.bmp"                              c NCU
+
+store(&Name) "Ghana Unicode - Ewe"                             c EWE
+store(&Message) "Ghana Unicode - Version 7.0 - Ewe Variant" c EWE
+store(&Bitmap) "GhanaUnicode.bmp"                              c EWE
+
+store(&Name) "Ghana Unicode - Safaliba"                             c SAF
+store(&Message) "Ghana Unicode - Version 7.0 - Safaliba Variant" c SAF
+store(&Bitmap) "GhanaUnicode-SAF.bmp"                              c SAF
+
+c   The following DOS command builds the keyboard (replace N with this line number)
+c  tail  --lines=+98 Ghana6UnicodeNFD.kmn >GhanaUnicode-TEST.kmn
+c Don't use grep,  just compile the whole rest of the file.
+store(&Name) "Ghana Unicode - Test" 
+store(&Message) "Ghana Unicode - Version 7.0 - Test Variant"
+store(&Bitmap) "GhanaUnicode-Test.bmp"
+
+begin Unicode >	use(Main)                                  c GHN
+
+group(Main) using keys                                         c GHN
+'\' + 'q' >	'\q'	c allow easy typing of \q for scriptures   c GHN
+
+
+c Open E, Open O and Eng used by all orthographies
+c ;<key> for the original key
++ "[" > U+025B                                           c GHN
+";" + "[" > "["                                                c GHN
++ "{" > U+0190                                           c GHN
+";" + "{" > "{"                                               c GHN
++ "]" > U+0254                                            c GHN
+";" + "]" > "]"                                                c GHN
++ "}" > U+0186                                           c GHN
+";" + "}" > "}"                                                c GHN
++ "=" > U+014B                                          c GHN
+";" + "=" > "="                                             c GHN
++ "+" > U+014A                                          c GHN
+";" + "+" > "+"                                              c GHN
+  
+ c  x & q used for additional 2 vowels in some 9 vowel orthographies
++ "x" > U+0269  c iota                                 c NKO FULL
+";" + "x" > "x"                                               c NKO FULL SAF
++ "X" > U+0196  c Iota                                c NKO FULL
+";" + "X" > "X"                                              c NKO FULL SAF
++ "q" > U+028B c upsilon                            c NKO  FULL EWE
+";" + "q" > "q"                                                c NKO FULL EWE SAF
++ "Q" > U+01B2  c Upsilon                          c NKO FULL EWE
+";" + "Q" > "Q"                                               c NKO FULL EWE SAF
+
+ c  SAFaliba uses x & q for e & o macron below (underline)
++ "x" > "e" U+0331  c e underline                  c SAF
++ "X" >  "E" U+0331  c E underline                c SAF
++ "q" >  "o" U+0331  c o underline                c SAF
++ "Q" > "O" U+0331  c O underline                     c SAF
+
+c semicolon combinations, mostly consonants
+";" + "d" > U+0256 c retroflexed d                             c EWE FULL
+";" + "D" > U+0189 c Retroflexed D                             c EWE FULL
+":" + "D" > U+0189 c Retroflexed D                             c EWE FULL
+";" + "f" > U+0192 c voiceless bilabial fricative              c EWE FULL
+";" + "F" > U+0191 c Voiceless Bilabial Fricative              c EWE FULL
+":" + "F" > U+0191 c Voiceless Bilabial Fricative              c EWE FULL
+
+";" + "e" > U+0259 c schwa                                     c LIP??? FULL
+";" + "E" > U+018E c Schwa                                     c LIP??? FULL
+":" + "E" > U+018E c Schwa                                     c LIP??? FULL
+";" + "?" > U+0294 c Glottal Stop                              c GTL
+";" + "g" > U+0263 c gamma                                     c DAG FULL
+";" + "G" > U+0194 c Gamma                                   c DAG FULL
+":" + "G" > U+0194 c Gamma                                   c DAG FULL
+c the next two are not in Ghana Keyman version 6, but would be preferable to qQ for EWE
+c ";" + "v" > U+028B c voiceless bilabial fricative same as upsilon           c EWE
+c ";" + "V" > U+01B2 c Voiceless Bilabial Fricative same as upsilon           c EWE
+c ":" + "V" > U+01B2 c Voiceless Bilabial Fricative same as upsilon           c EWE
+";" + "z" > U+0292 c ezh                                           c DAG FULL
+";" + "Z" > U+01B7 c Ezh                                         c DAG FULL
+ ":" + "Z" > U+01B7 c Ezh                                         c DAG FULL
+
+
+c Underscore e & o for Chumburung
+";" + "/" > "/"                                                          c NCU
+"/" + "e" > "e" U+0331                                           c NCU
+"/" + "E" > "E" U+0331                                           c NCU
+"/" + "o" > "o" U+0331                                           c NCU
+"/" + "O" > "O" U+0331                                           c NCU
+
+ 
+c Apostrophe is used for Acute Accent High Tone
+";" + "'" > "'"                                                c FULL BUD EWE NKO FULL SAF
+
+c SAFaliba Acute Accent High Tone typed after the character
++ "'" > U+301                                                c SAF
+
+c English Vowels High Tone
+"'" + "a" > "a" U+0301                                        c FULL BUD EWE NKO
+"'" + "A" > "A" U+0301                                      c FULL BUD EWE NKO
+"'" + "e" > "e" U+0301                                         c FULL BUD EWE NKO
+"'" + "E" > "E" U+0301                                         c FULL BUD EWE NKO
+"'" + "i" > "i" U+0301                                          c FULL BUD EWE NKO
+"'" + "I" > "I" U+0301                                          c FULL BUD EWE NKO
+"'" + "o" > "o" U+0301                                        c FULL BUD EWE NKO
+"'" + "O" > "O" U+0301                                       c FULL BUD EWE NKO
+"'" + "u" > "u" U+0301                                         c FULL BUD EWE NKO
+"'" + "U" > "U" U+0301                                        c FULL BUD EWE NKO
+
+c English Consonants High Tone
+"'" + "b" > "b" U+0301                                        c FULL BUD
+"'" + "B" > "B" U+0301                                        c FULL BUD
+"'" + "l" > "l" U+0301                                         c FULL BUD
+"'" + "L" > "L" U+0301                                        c FULL BUD
+"'" + "m" > "m" U+0301                                        c FULL BUD
+"'" + "M" > "M" U+0301                                        c FULL BUD
+"'" + "n" > "n" U+0301                                        c FULL BUD
+"'" + "N" > "N" U+0301                                        c FULL BUD
+
+c Eng High Tone
+"'" + "=" > U+014B U+0301                                    c FULL BUD
+"'" + "+" > U+014A U+0301                                    c FULL BUD
+
+c Epsilon & Open-o High Tone
+"'" + "[" > U+025B U+0301                                 c FULL BUD EWE NKO
+"'" + "{" > U+0190 U+0301                                 c FULL BUD EWE NKO
+"'" + "]" > U+0254 U+0301                                  c FULL BUD EWE NKO
+"'" + "}" > U+0186 U+0301                                 c FULL BUD EWE NKO
+
+c Iota & Upsilon High Tone
+"'" + "x" > U+0269 U+0301                                 c FULL NKO
+"'" + "X" > U+0196 U+0301                                c FULL NKO
+"'" + "q" > U+028B U+0301                                 c FULL NKO
+"'" + "Q" > U+01B2 U+0301                                c FULL NKO
+
+c Schwa High Tone
+"';" + "e" > U+0259 U+0301                                  c FULL LIP???
+"';" + "E" > U+018E U+0301                                  c FULL LIP???
+"':" + "E" > U+018E U+0301                                  c FULL LIP???
+ 
+c Open Quote is used for Grave Accent/Low Tone
+";" + "`" > "`"                                                           c FULL  BUD EWE SAF
+
+c SAFaliba Grave Accent/Low Tone typed after the character
++ "`" > U+300                                                c SAF
+
+c English Vowels Low Tone
+"`" + "a" > "a" U+0300                                          c FULL BUD EWE
+"`" + "A" > "A" U+0300                                         c FULL BUD EWE 
+"`" + "e" > "e" U+0300                                           c FULL BUD EWE
+"`" + "E" > "E" U+0300                                          c FULL BUD EWE
+"`" + "i" > "i" U+0300                                            c FULL BUD EWE
+"`" + "I" > "I" U+0300                                           c FULL BUD EWE
+"`" + "o" > "o" U+0300                                          c FULL BUD EWE
+"`" + "O" > "O" U+0300                                         c FULL BUD EWE
+"`" + "u" > "u" U+0300                                          c FULL BUD EWE
+"`" + "U" > "U" U+0300                                        c FULL BUD EWE
+
+c English Consonants Low Tone
+"`" + "b" > "b" U+0300                                        c FULL BUD
+"`" + "B" > "B" U+0300                                        c FULL BUD
+"`" + "l" > "l" U+0300                                          c FULL BUD
+"`" + "L" > "L" U+0300                                        c FULL BUD
+"`" + "m" > "m" U+0300                                        c FULL BUD
+"`" + "M" > "M" U+0300                                        c FULL BUD
+"`" + "n" > "n" U+0300                                        c FULL BUD
+"`" + "N" > "N" U+0300                                        c FULL BUD
+
+c Eng Low Tone
+"`" + "=" > U+014B U+0300                                    c FULL BUD
+"`" + "+" > U+014A U+0300                                    c FULL BUD
+
+c Epsilon and Open-O Low Tone 
+"`" + "[" > U+025B U+0300                                   c FULL EWE
+"`" + "{" > U+0190 U+0300                                    c FULL EWE
+"`" + "]" > U+0254 U+0300                                     c FULL EWE
+"`" + "}" > U+0186 U+0300                                    c FULL EWE
+
+c I believe Chumburung uses only low tone and only in one word "mò̱"
+"`/" + "o" > "o" U+0331 U+300                     c NCU
+"`/" + "O" > "O" U+0331 U+300                   c NCU
+
+c Iota & Upsilon Low Tone
+"`" + "x" > U+0269 U+0300                                  c FULL 
+"`"  + "X" > U+0196 U+0300                                 c  FULL
+"`"  + "q" > U+028B U+0300                                  c FULL 
+"`"  + "Q" > U+01B2 U+0300                                  c FULL 
+
+c Schwa Low Tone
+"`;" + "e" > U+0259 U+0300                                  c FULL LIP???
+"`;" + "E" > U+018E U+0300                                  c FULL LIP???
+"`:" + "E" > U+018E U+0300                                  c FULL LIP???
+
+c Tilde is used for Nasalization
+";" + "~" > "~"                                                        c FULL SAF
+
+c SAFaliba Nasalization typed after the character
++ "~" > U+303                                                c SAF
+
+c English Vowels Nasalization
+"~" + "a" > "a" U+0303                                      c  FULL
+"~" + "A" > "A" U+0303                                      c  FULL
+"~" + "e" > "e" U+0303                                      c  FULL
+"~" + "E" > "E" U+0303                                     c  FULL
+"~" + "i" > "i" U+0303                                      c  FULL
+"~" + "I" > "I" U+0303                                     c  FULL
+"~" + "o" > "o" U+0303                                     c  FULL
+"~" + "O" > "O" U+0303                                     c  FULL
+"~" + "u" > "u" U+0303                                     c  FULL
+"~" + "U" > "U" U+0303                                     c  FULL
+
+c Epsilon & Open-O Nasalization                                    c  FULL
+"~" + "[" > U+025B U+0303                                     c  FULL
+"~" + "{" > U+0190 U+0303                                     c  FULL
+"~" + "]" > U+0254 U+0303                                     c  FULL
+"~" + "}" > U+0186 U+0303                                     c  FULL
+
+c Iota & Upsilon Nasalization
+"~" + "x" > U+0269 U+0303                                     c  FULL
+"~"  + "X" > U+0196 U+0303                                   c  FULL
+"~"  + "q" > U+028B U+0303                                  c  FULL
+"~"  + "Q" > U+01B2 U+0303                                  c  FULL
+
+c Schwa Nasalized
+"~;" + "e" > U+0259 U+0303                                  c  FULL
+"~;" + "E" > U+018E U+0303                                  c  FULL
+"~:" + "E" > U+018E U+0303                                  c  FULL
+
+
+c English Vowels High Nasalization - Apostrophe Tilde
+"'~" + "a" > "a" U+0303 U+0301                      c FULL
+"'~" + "A" > "A" U+0303 U+0301                    c  FULL
+"'~" + "e" > "e" U+0303  U+0301                    c  FULL
+"'~" + "E" > "E" U+0303 U+0301                    c  FULL
+"'~" + "i" > "i" U+0303  U+0301                    c  FULL
+"'~" + "I" > "I" U+0303 U+0301                    c  FULL
+"'~" + "o" > "o" U+0303 U+0301                    c  FULL
+"'~" + "O" > "O" U+0303 U+0301                    c  FULL
+"'~" + "u" > "u" U+0303 U+0301                    c  FULL
+"'~" + "U" > "U" U+0303 U+0301                    c  FULL
+
+c Epsilon & Open-O High Nasalization - Apostrophe Tilde
+"'~" + "[" > U+025B U+0303 U+0301                    c  FULL
+"'~" + "{" > U+0190 U+0303 U+0301                    c  FULL
+"'~" + "]" > U+0254 U+0303 U+0301                    c  FULL
+"'~" + "}" > U+0186 U+0303 U+0301                    c  FULL
+
+c Iota & Upsilon High Nasalization - Apostrophe Tilde
+"'~" + "x" > U+0269 U+0303 U+0301                    c  FULL
+"'~" + "X" > U+0196 U+0303 U+0301                    c  FULL
+"'~" + "q" > U+028B U+0303 U+0301                   c  FULL
+"'~" + "Q" > U+01B2 U+0303 U+0301                   c  FULL
+
+c Schwa High Nasalization - Tilde Apostrophe
+"'~;" + "e" > U+0259 U+0303  U+0301                  c  FULL
+"'~;" + "E" > U+018E U+0303 U+0301                   c  FULL
+
+c English Vowels High Nasalization - Tilde Apostrophe
+"~'" + "a" > "a" U+0303 U+0301                      c FULL
+"~'" + "A" > "A" U+0303 U+0301                    c  FULL
+"~'" + "e" > "e" U+0303  U+0301                    c  FULL
+"~'" + "E" > "E" U+0303 U+0301                    c  FULL
+"~'" + "i" > "i" U+0303  U+0301                    c  FULL
+"~'" + "I" > "I" U+0303 U+0301                    c  FULL
+"~'" + "o" > "o" U+0303 U+0301                    c  FULL
+"~'" + "O" > "O" U+0303 U+0301                    c  FULL
+"~'" + "u" > "u" U+0303 U+0301                    c  FULL
+"~'" + "U" > "U" U+0303 U+0301                    c  FULL
+
+c Epsilon & Open-O High Nasalization - Tilde Apostrophe
+"~'" + "[" > U+025B U+0303 U+0301                    c  FULL
+"~'" + "{" > U+0190 U+0303 U+0301                    c  FULL
+"~'" + "]" > U+0254 U+0303 U+0301                    c  FULL
+"~'" + "}" > U+0186 U+0303 U+0301                    c  FULL
+
+c Iota & Upsilon High Nasalization - Tilde Apostrophe
+"~'" + "x" > U+0269 U+0303 U+0301                    c  FULL
+"~'" + "X" > U+0196 U+0303 U+0301                    c  FULL
+"~'" + "q" > U+028B U+0303 U+0301                   c  FULL
+"~'" + "Q" > U+01B2 U+0303 U+0301                   c  FULL
+
+c Schwa High Nasalization - Tilde Apostrophe
+"~';" + "e" > U+0259 U+0303  U+0301                  c  FULL
+"~';" + "E" > U+018E U+0303 U+0301                   c  FULL
+"~':" + "E" > U+018E U+0303 U+0301                   c  FULL
+
+c English Vowels Low Nasalization - Grave Tilde
+"`~" + "a" > "a" U+0303 U+0300                      c FULL
+"`~" + "A" > "A" U+0303 U+0300                    c  FULL
+"`~" + "e" > "e" U+0303  U+0300                    c  FULL
+"`~" + "E" > "E" U+0303 U+0300                    c  FULL
+"`~" + "i" > "i" U+0303  U+0300                    c  FULL
+"`~" + "I" > "I" U+0303 U+0300                    c  FULL
+"`~" + "o" > "o" U+0303 U+0300                    c  FULL
+"`~" + "O" > "O" U+0303 U+0300                    c  FULL
+"`~" + "u" > "u" U+0303 U+0300                    c  FULL
+"`~" + "U" > "U" U+0303 U+0300                    c  FULL
+
+c Epsilon & Open-O Low Nasalization - Grave Tilde
+"`~" + "[" > U+025B U+0303 U+0300                    c  FULL
+"`~" + "{" > U+0190 U+0303 U+0300                    c  FULL
+"`~" + "]" > U+0254 U+0303 U+0300                    c  FULL
+"`~" + "}" > U+0186 U+0303 U+0300                    c  FULL
+
+c Iota & Upsilon Low Nasalization - Grave Tilde
+"`~" + "x" > U+0269 U+0303 U+0300                    c  FULL
+"`~" + "X" > U+0196 U+0303 U+0300                    c  FULL
+"`~" + "q" > U+028B U+0303 U+0300                   c  FULL
+"`~" + "Q" > U+01B2 U+0303 U+0300                   c  FULL
+
+c Schwa Low Nasalization - Grave Tilde
+"`~;" + "e" > U+0259 U+0303  U+0300                  c  FULL
+"`~;" + "E" > U+018E U+0303 U+0300                   c  FULL
+"`~:" + "E" > U+018E U+0303 U+0300                   c  FULL
+
+c English Vowels Low Nasalization - Tilde Grave
+"~`" + "a" > "a" U+0303 U+0300                      c FULL
+"~`" + "A" > "A" U+0303 U+0300                    c  FULL
+"~`" + "e" > "e" U+0303  U+0300                    c  FULL
+"~`" + "E" > "E" U+0303 U+0300                    c  FULL
+"~`" + "i" > "i" U+0303  U+0300                    c  FULL
+"~`" + "I" > "I" U+0303 U+0300                    c  FULL
+"~`" + "o" > "o" U+0303 U+0300                    c  FULL
+"~`" + "O" > "O" U+0303 U+0300                    c  FULL
+"~`" + "u" > "u" U+0303 U+0300                    c  FULL
+"~`" + "U" > "U" U+0303 U+0300                    c  FULL
+
+c Epsilon & Open-O Low Nasalization - Tilde Grave
+"~`" + "[" > U+025B U+0303 U+0300                    c  FULL
+"~`" + "{" > U+0190 U+0303 U+0300                    c  FULL
+"~`" + "]" > U+0254 U+0303 U+0300                    c  FULL
+"~`" + "}" > U+0186 U+0303 U+0300                    c  FULL
+
+c Iota & Upsilon Low Nasalization - Tilde Grave
+"~`" + "x" > U+0269 U+0303 U+0300                    c  FULL
+"~`" + "X" > U+0196 U+0303 U+0300                    c  FULL
+"~`" + "q" > U+028B U+0303 U+0300                   c  FULL
+"~`" + "Q" > U+01B2 U+0303 U+0300                   c  FULL
+
+c Schwa Low Nasalization - Tilde Grave
+"~`;" + "e" > U+0259 U+0303  U+0300                  c  FULL
+"~`;" + "E" > U+018E U+0303 U+0300                   c  FULL
+"~`:" + "E" > U+018E U+0303 U+0300                   c  FULL
+
+c Circumflex
+";" + "^" > "^"                                                          c FULL  
+
+c English Vowels Circumflex
+"^" + "a" > "a" U+0302                                          c FULL 
+"^" + "A" > "A" U+0302                                         c FULL 
+"^" + "e" > "e" U+0302                                           c FULL
+"^" + "E" > "E" U+0302                                          c FULL
+"^" + "i" > "i" U+0302                                            c FULL
+"^" + "I" > "I" U+0302                                           c FULL
+"^" + "o" > "o" U+0302                                          c FULL
+"^" + "O" > "O" U+0302                                         c FULL
+"^" + "u" > "u" U+0302                                          c FULL
+"^" + "U" > "U" U+0302                                        c FULL
+
+c English Consonants Circumflex
+"^" + "b" > "b" U+0302                                        c  
+"^" + "B" > "B" U+0302                                        c  
+"^" + "l" > "l" U+0302                                          c  FULL
+"^" + "L" > "L" U+0302                                        c  FULL
+"^" + "m" > "m" U+0302                                        c  FULL
+"^" + "M" > "M" U+0302                                        c  FULL
+"^" + "n" > "n" U+0302                                       c FULL BUD
+"^" + "N" > "N" U+0302                                        c FULL BUD
+
+c Eng Circumflex
+"^" + "=" > U+014B U+0302                                    c  FULL
+"^" + "+" > U+014A U+0302                                    c  FULL
+
+c Epsilon and Open-O Circumflex
+"^" + "[" > U+025B U+0302                                   c  FULL
+"^" + "{" > U+0190 U+0302                                    c  FULL
+"^" + "]" > U+0254 U+0302                                     c  FULL
+"^" + "}" > U+0186 U+0302                                    c  FULL
+
+c Iota & Upsilon Circumflex
+"^" + "x" > U+0269 U+0302                                  c  FULL
+"^"  + "X" > U+0196 U+0302                                c  FULL
+"^"  + "q" > U+028B U+0302                                c  FULL
+"^"  + "Q" > U+01B2 U+0302                                c  FULL
+
+c Schwa Circumflex
+"^;" + "e" > U+0259 U+0302                                  c FULL
+"^;" + "E" > U+018E U+0302                                  c FULL
+"^:" + "E" > U+018E U+0302                                  c FULL
+
+c English Vowels Circumflex Nasalization  - Circumflex Tilde
+"^~" + "a" > "a" U+0303 U+0302                      c FULL
+"^~" + "A" > "A" U+0303 U+0302                    c  FULL
+"^~" + "e" > "e" U+0303  U+0302                    c  FULL
+"^~" + "E" > "E" U+0303 U+0302                    c  FULL
+"^~" + "i" > "i" U+0303  U+0302                    c  FULL
+"^~" + "I" > "I" U+0303 U+0302                    c  FULL
+"^~" + "o" > "o" U+0303 U+0302                    c  FULL
+"^~" + "O" > "O" U+0303 U+0302                    c  FULL
+"^~" + "u" > "u" U+0303 U+0302                    c  FULL
+"^~" + "U" > "U" U+0303 U+0302                    c  FULL
+
+c Epsilon & Open-O Circumflex Nasalization - Circumflex Tilde
+"^~" + "[" > U+025B U+0303 U+0302                    c  FULL
+"^~" + "{" > U+0190 U+0303 U+0302                    c  FULL
+"^~" + "]" > U+0254 U+0303 U+0302                    c  FULL
+"^~" + "}" > U+0186 U+0303 U+0302                    c  FULL
+
+c Iota & Upsilon Circumflex Nasalization - Circumflex Tilde
+"^~" + "x" > U+0269 U+0303 U+0302                    c  FULL
+"^~" + "X" > U+0196 U+0303 U+0302                    c  FULL
+"^~" + "q" > U+028B U+0303 U+0302                   c  FULL
+"^~" + "Q" > U+01B2 U+0303 U+0302                   c  FULL
+
+c Schwa Circumflex Nasalization - Circumflex Tilde
+"^~;" + "e" > U+0259 U+0303  U+0302                  c  FULL
+"^~;" + "E" > U+018E U+0303 U+0302                   c  FULL
+"^~:" + "E" > U+018E U+0303 U+0302                   c  FULL
+
+c English Vowels Circumflex Nasalization  - Tilde Circumflex
+"~^" + "a" > "a" U+0303 U+0302                      c FULL
+"~^" + "A" > "A" U+0303 U+0302                    c  FULL
+"~^" + "e" > "e" U+0303  U+0302                    c  FULL
+"~^" + "E" > "E" U+0303 U+0302                    c  FULL
+"~^" + "i" > "i" U+0303  U+0302                    c  FULL
+"~^" + "I" > "I" U+0303 U+0302                    c  FULL
+"~^" + "o" > "o" U+0303 U+0302                    c  FULL
+"~^" + "O" > "O" U+0303 U+0302                    c  FULL
+"~^" + "u" > "u" U+0303 U+0302                    c  FULL
+"~^" + "U" > "U" U+0303 U+0302                    c  FULL
+
+c Epsilon & Open-O Circumflex Nasalization Tilde Circumflex
+"~^" + "[" > U+025B U+0303 U+0302                    c  FULL
+"~^" + "{" > U+0190 U+0303 U+0302                    c  FULL
+"~^" + "]" > U+0254 U+0303 U+0302                    c  FULL
+"~^" + "}" > U+0186 U+0303 U+0302                    c  FULL
+
+c Iota & Upsilon Circumflex Nasalization Tilde Circumflex
+"~^" + "x" > U+0269 U+0303 U+0302                    c  FULL
+"~^" + "X" > U+0196 U+0303 U+0302                    c  FULL
+"~^" + "q" > U+028B U+0303 U+0302                   c  FULL
+"~^" + "Q" > U+01B2 U+0303 U+0302                   c  FULL
+
+c Schwa Circumflex Nasalization Tilde Circumflex
+"~^;" + "e" > U+0259 U+0303  U+0302                  c  FULL
+"~^;" + "E" > U+018E U+0303 U+0302                   c  FULL
+"~^:" + "E" > U+018E U+0303 U+0302                   c  FULL
