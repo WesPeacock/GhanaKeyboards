@@ -6,7 +6,7 @@
 # Keyboard: Ghana Unicode &ndash; Nkonya Phonetic variant
 
 ##Introduction
-This keyboard is designed for the purpose of keying phonetic annotations in the dictionary of the Nkonya language of Ghana. The keystrokes of the Nkonya Phonetic keyboard produce the IPA (International Phonetic Alphabet) characters equivalent to Nkonya letters, and additional IPA features.
+This keyboard is designed for the purpose of keying phonetic annotations in the dictionary of the Nkonya language of Ghana. The keystrokes of the Nkonya Phonetic keyboard produce the IPA (International Phonetic Alphabet) characters equivalent to Nkonya letters, and has additional IPA features.
 
 ##Keystrokes Used
  Two of the letters in the Nkonya alphabet (ɩ and ʋ) are different in the IPA (ɪ and ʊ). As well, the IPA characters don't have upper case. Some upper case keystrokes are used to type IPA characters that are not in the Nkonya alphabet.
@@ -62,7 +62,7 @@ Nkonya has a glottal stop that isn't marked in the alphabet:
 </table>
 <br><br>
 
-A nasalized vowel is marked in the Nkonya alphabet with n after it. In IPA it is marked with a tilde ~ over the vowel ( &#x25CC;&#x0303; ):
+A nasalized vowel is marked in the Nkonya alphabet with n after it. In IPA it is marked with a tilde ( ~ ) over the vowel ( &#x25CC;&#x0303; ):
 
 <table width="80%">
 	<tr>
@@ -89,7 +89,7 @@ In addition to the high tone (&#x25CC;&#x0301;) mentioned above, there are risin
 </table>
 <br><br>
 
-Rising and falling tones can be stacked on top of a nasalized vowel as well. Type the tilde ( ~ ) first:
+Tones can be stacked on top of a nasalized vowel as well. Type the tilde ( ~ ) first:
 
 <table width="90%">
 	<tr>
@@ -139,7 +139,7 @@ An n in front of an f is different from both m and n. IPA uses a different lette
 </table>
 <br><br>
 
-t&#x0361;&#x0283; is used for the English “ch” sound. In Nkonya, this sound varies according to dialect. The Southern dialect "ts" should also have a tie bar :
+t&#x0361;&#x0283; is used for the English “ch” sound. In Nkonya, this sound varies according to dialect. The Southern dialect "ts" should also have a tie bar:
 
 <table width="75%">
 	<tr>
@@ -171,4 +171,4 @@ A w following a consonant uses a special raised w – b&#x02B7; to indicate that
 <br><br>
 
 ##The Icon
-The icon for the keyboard is: ![alt text](source/GhanaUnicode-NK1.png)
+The icon for the keyboard is: ![alt text](../source/GhanaUnicode-NK1.png)

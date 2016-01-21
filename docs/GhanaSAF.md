@@ -6,7 +6,7 @@
 # Keyboard: Ghana Unicode &ndash; Safaliba variant
 
 ##Introduction
-This keyboard is used for typing the alphabet of the Safaliba language of Ghana. It is the same as the Ghana Short keyboard with two extra vowels and a high and low tone and nasalization diacritic markers.
+This keyboard is used for typing the alphabet of the Safaliba language of Ghana. It is the same as the Ghana Short keyboard with two additional vowels and high tone, low tone and nasalization markers.
 
 ##Keystrokes Used
 The following keys are modified by this keyboard:
@@ -29,16 +29,17 @@ The following keys are modified by this keyboard:
 </table>
 <br><br>
 
-The Safaliba keyboard uses apostrophe ( ' ), grave accent ( \` ), and tilde ( ~ ) for thecorresponding combining diacritics, &#9676;&#769;, &#9676;&#768; and  &#9676;&#771;. These are typed following the character they will modify.
+The Safaliba keyboard uses apostrophe ( ' ), grave accent ( \` ), and tilde ( ~ ) for the corresponding combining diacritics, &#9676;&#769;, &#9676;&#768; and  &#9676;&#771;. They can be stacked. Type them following the character they will modify:
 
- <table width="80%">
+ <table width="90%">
 	<tr>
 		<td align="center" bgcolor="#E9E9E9"> ' → &#9676;&#769;  </td>
 		<td align="center">  \` → &#9676;&#768;  </td>
 		<td align="center" bgcolor="#E9E9E9"> ~ →  &#9676;&#771; </td>
 		<td align="center" > E.g.: a'  → a&#769; </td>
-		<td align="center" >x\`  → e&#817;&#768; </td>
+		<td align="center"  bgcolor="#E9E9E9">x\`  → e&#817;&#768; </td>
 		<td align="center" > \]~   →  ɔ&#771;</td>
+		<td align="center"  bgcolor="#E9E9E9">q~\`  → o&#817;&#771;&#768; </td>
 	</tr>
 </table>
 <br><br>
