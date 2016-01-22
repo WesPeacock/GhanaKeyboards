@@ -27,4 +27,4 @@ The following keys are modified by this keyboard:
 </table>
 <br><br>
      
-The icon for the keyboard is: ![alt text](source/GhanaUnicode-Short.bmp)
+The icon for the keyboard is: ![alt text](../source/GhanaUnicode-Short.bmp)

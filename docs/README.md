@@ -24,10 +24,10 @@ Create a temporary LibreOffice document with pandoc. I used .odp because with Pa
         pandoc -o "$TMP"/docs/$DOC.odp "$WRK"/docs/$DOC.md
         libreoffice "$TMP"/docs/$DOC.odp
 
-Here are some gotchas / things to check:
+Here are some gotchas / tweaks:
 
 * The page format is A4
-* The icon size (at the end) is original size  (0.56cm by  0.56cm)
+* The icon size (at the end) is original size  (0.56cm by 0.56cm or larger)
     * Right click on the image
     * Choose the Picture Menu Item
     * Choose the Type tab.
@@ -35,4 +35,4 @@ Here are some gotchas / things to check:
 * PDF export PDF/A-1a is set (includes partial fonts in the PDF)
 * The export may complain about making a transparent object opaque. I ignored this and couldn't see anything wrong.
 
-When the gotchas are fixed for the document, you can write the PDF with "Export to PDF".
+When the document is tweaked, you can write the PDF with "Export to PDF".

@@ -53,7 +53,7 @@ The following keys are modified by the Nkonya keyboard:
 </table>
 <br><br>
 
-; (semicolon key) followed by any of the above keystrokes gives the original character:
+; (semicolon key) followed by any of the above letters gives the English character:
 
  <table width="80%">
     <tr>
@@ -69,7 +69,6 @@ The following keys are modified by the Nkonya keyboard:
 		<td align="center">  ;X → X  </td>
 		<td align="center" bgcolor="#E9E9E9"> ;q → q  </td>
 		<td align="center">  ;Q → Q  </td>
-		<td align="center" bgcolor="#E9E9E9"> ;' → '  </td>
 	</tr>
 </table>
 <br><br>
