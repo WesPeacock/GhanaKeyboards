@@ -46,7 +46,7 @@ store(&Version) "7.0"                                       c GHN
 store(&Name) "Ghana Unicode - Nkonya Phonetic"
 store(&Message) "Ghana Unicode -  Phonetic - Nkonya Variant"
 store(&Bitmap) "GhanaUnicode-NK1.png"
-store(&Hotkey) "^%P"
+c store(&Hotkey) "^%P"
 
 begin    Unicode >	use(Main)
 group(Main) using keys
