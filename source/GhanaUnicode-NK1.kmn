@@ -1,11 +1,12 @@
-c Nkonya IPA Keyboard for Keyman / kmfl
+﻿c Nkonya IPA Keyboard for Keyman / kmfl
 c file was hand edited from GhanaUnicode-NKO-NFD.kmn
 c uses phonetic equivalents for Nkonya keystrokes
+c 2017-11-25 - Update to v 9.0
 c adds the following diacritics and other special IPA characters:
 c diacritics are typed after the character (overstrikes illustrated with 'a')
 
 c The following are the IPA equivalents of the Nkonya keyboard
-   c NOTE that there are no upper case characters
+c NOTE that there are no upper case characters
 c Type : ' Result: á  -- U+0301 COMBINING ACUTE ACCENT
 c Type : [  Result:  ɛ U+025B U+025B 	LATIN SMALL LETTER OPEN E
 c Type : ]  Result:  ɔ U+0254 LATIN SMALL LETTER OPEN O
@@ -13,40 +14,42 @@ c Type : =  Result:  ŋ U+014B LATIN SMALL LETTER ENG
 c Same vowel with different IPA characters:
 c Type : x  Result:  ɪ U+026A LATIN LETTER SMALL CAPITAL I
 c Type : q  Result:  ʊ U+028A LATIN SMALL LETTER UPSILON
-    c Example: ɩbʋ -- ɪbʊ
+c Example: ɩbʋ -- ɪbʊ
 
 c Modifiers to vowels:
 c Type : ~ Result: ã -- U+0303 COMBINING TILDE -- nasalized vowels
-    c Example: dan -- dãʔ
+c Example: dan -- dãʔ
 c Type : $ Result:   ǎ -- U+030C 	COMBINING CARON
-    c Example: baflɛ "pawpaw" -- baflɛ̌ʔ
+c Example: baflɛ "pawpaw" -- baflɛ̌ʔ
 c Type : ^ Result: â -- U+0302 COMBINING CIRCUMFLEX ACCENT
-    c Example: ɩdɛhɔ "It is burning" -- ɪdɛhɔ̂ʔ
+c Example: ɩdɛhɔ "It is burning" -- ɪdɛhɔ̂ʔ
 c Type : : Result: ː -- U+02D0 MODIFIER LETTER TRIANGULAR COLON -- long vowels
-    c Example: f'ɛ́ɛ́ -- fɛ́ː
+c Example: fɛ́ɛ́ -- fɛ́ː
     
 c Other IPA characters and modifiers
 c Type : ? Result: ʔ -- U+0294 LATIN LETTER GLOTTAL STOP
-    c Example: dɔ "to farm -- dɔʔ
+c Example: dɔ "to farm -- dɔʔ
 c Type : % Result:   a͡b U+0361 COMBINING DOUBLE INVERTED BREVE
-    c Example: ɔkpa "path" -- ɔk͡pa
+c Example: ɔkpa "path" -- ɔk͡pa
 c Type : N  Result:  ɲ U+0272  LATIN SMALL LETTER N WITH LEFT HOOK
-    c Example: nya "to get" -- ɲa
+c Example: nya "to get" -- ɲa
 c Type : M  Result:  ɱ U+0271 LATIN SMALL LETTER M WITH HOOK
-    c Example: nfɩ "here" -- ɱfɪ
+c Example: nfɩ "here" -- ɱfɪ
 c Type : S  Result:  ʃ U+0283 LATIN SMALL LETTER ESH
-    c Example: ntsu "water (Northern) -- ntʃu
-    c Example: kɩaɩ "dog (Southern) -- tʃɪaɪ
+c Example: ntsu "water (Northern) -- ntʃu
+c Example: kɩaɩ "dog (Southern) -- tʃɪaɪ
 c Type : J  Result:  ʤ U+02A4 LATIN SMALL LETTER DEZH DIGRAPH
-    c Example: gya "chase" -- ʤa
+c Example: gya "chase" -- ʤa
 c Type : W  Result:  bʷ U+02B7 	MODIFIER LETTER SMALL W
-    c Example: bwɛ "make" -- bʷɛ
+c Example: bwɛ "make" -- bʷɛ
     
-store(&Version) "7.0"                                       c GHN
+store(&VERSION) '9.0'
 store(&Name) "Ghana Unicode - Nkonya Phonetic"
 store(&Message) "Ghana Unicode -  Phonetic - Nkonya Variant"
-store(&Bitmap) "GhanaUnicode-NK1.png"
+store(&BITMAP) 'GhanaUnicode-NK1.png'
 c store(&Hotkey) "^%P"
+store(&ETHNOLOGUECODE) 'nko'
+store(&COPYRIGHT) '© 2017 GILLBT'
 
 begin    Unicode >	use(Main)
 group(Main) using keys
