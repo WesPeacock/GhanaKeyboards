@@ -1,4 +1,4 @@
-c recompile for Keyman version 9.0
+c 2017/12/04 recompile for Keyman version 9.0 -WLP
 c 2016/01/07 Add Safaliba (occasionally misspelled SAFaliba to include comments in the grep)
 c lines in all languages are commented GHN, specific lines are commented TLA
 c grep -E "(GHN)|(Short)" Ghana7UnicodeNFD.kmn >GhanaUnicode-Short.kmn
