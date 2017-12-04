@@ -1,18 +1,23 @@
+c recompile for Keyman version 9.0
 c 2016/01/07 Add Safaliba (occasionally misspelled SAFaliba to include comments in the grep)
-c  lines in all languages are commented GHN, specific lines are commented TLA
-c       grep -E "(GHN)|(Short)" Ghana7UnicodeNFD.kmn >GhanaUnicode-Short.kmn
-c       grep -E  "(GHN)|(FULL)" Ghana7UnicodeNFD.kmn >GhanaUnicode-FULL.kmn
-c       grep -E  "(GHN)|(TLA)" Ghana7UnicodeNFD.kmn >GhanaUnicode-TLA.kmn
-c          grep -E  "(GHN)|(DAG)" Ghana7UnicodeNFD.kmn >GhanaUnicode-DAG.kmn
-c          grep -E  "(GHN)|(NKO)" Ghana7UnicodeNFD.kmn >GhanaUnicode-NKO.kmn
-c          grep -E  "(GHN)|(BUD)" Ghana7UnicodeNFD.kmn >GhanaUnicode-BUD.kmn
-c          grep -E  "(GHN)|(NCU)" Ghana7UnicodeNFD.kmn >GhanaUnicode-NCU.kmn
-c          grep -E  "(GHN)|(EWE)" Ghana7UnicodeNFD.kmn >GhanaUnicode-EWE.kmn
-c          grep -E  "(GHN)|(SAF)" Ghana7UnicodeNFD.kmn >GhanaUnicode-SAF.kmn
-store(&Version) "7.0"                                       c GHN
+c lines in all languages are commented GHN, specific lines are commented TLA
+c grep -E "(GHN)|(Short)" Ghana7UnicodeNFD.kmn >GhanaUnicode-Short.kmn
+c grep -E  "(GHN)|(FULL)" Ghana7UnicodeNFD.kmn >GhanaUnicode-FULL.kmn
+c grep -E  "(GHN)|(TLA)" Ghana7UnicodeNFD.kmn >GhanaUnicode-TLA.kmn
+c grep -E  "(GHN)|(DAG)" Ghana7UnicodeNFD.kmn >GhanaUnicode-DAG.kmn
+c grep -E  "(GHN)|(NKO)" Ghana7UnicodeNFD.kmn >GhanaUnicode-NKO.kmn
+c grep -E  "(GHN)|(BUD)" Ghana7UnicodeNFD.kmn >GhanaUnicode-BUD.kmn
+c grep -E  "(GHN)|(NCU)" Ghana7UnicodeNFD.kmn >GhanaUnicode-NCU.kmn
+c grep -E  "(GHN)|(EWE)" Ghana7UnicodeNFD.kmn >GhanaUnicode-EWE.kmn
+c grep -E  "(GHN)|(SAF)" Ghana7UnicodeNFD.kmn >GhanaUnicode-SAF.kmn
+store(&VERSION) '9.0'
 store(&Name) "Ghana Unicode - Safaliba"                             c SAF
 store(&Message) "Ghana Unicode - Version 7.0 - Safaliba Variant" c SAF
-store(&Bitmap) "GhanaUnicode-SAF.bmp"                              c SAF
+store(&BITMAP) 'GhanaUnicode-SAF.bmp'
+store(&TARGETS) 'windows macosx'
+store(&ETHNOLOGUECODE) 'SAF'
+store(&COPYRIGHT) '© GILLBT, 2017'
+store(&KEYBOARDVERSION) '2'
 begin Unicode >	use(Main)                                  c GHN
 group(Main) using keys                                         c GHN
 '\' + 'q' >	'\q'	c allow easy typing of \q for scriptures   c GHN
@@ -32,7 +37,7 @@ group(Main) using keys                                         c GHN
 ";" + "X" > "X"                                              c NKO FULL SAF
 ";" + "q" > "q"                                                c NKO FULL EWE SAF
 ";" + "Q" > "Q"                                               c NKO FULL EWE SAF
- c  SAFaliba uses x & q for e & o macron below (underline)
+c SAFaliba uses x & q for e & o macron below (underline)
 + "x" > "e" U+0331  c e underline                  c SAF
 + "X" >  "E" U+0331  c E underline                c SAF
 + "q" >  "o" U+0331  c o underline                c SAF
